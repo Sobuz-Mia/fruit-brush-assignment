@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,8 +8,91 @@
     <!-- Tailwind and daisyUi CDN -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@3.4.0/dist/full.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+
+    <!-- google fonts awesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- custom tailwind and daisyUi -->
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                'primary-bg': '#F85559',
+              }
+            }
+          }
+        }
+      </script>
+    <!-- custom css -->
+    <style>
+        .lato{
+            font-family: 'Lato', sans-serif;
+        }
+    </style>
 </head>
-<body>
-    
+<body class="lato">
+    <header>
+        <!-- navbar section start here -->
+        <div class="navbar bg-primary-bg text-white flex justify-around rounded-[500px] my-5">
+            <div class="hidden lg:flex">
+                <ul class="menu menu-horizontal px-1">
+                    <li><a>Home</a></li>
+                    <li><a>About</a></li>
+                    <li><a>Shop</a></li>
+                    <li><a>All Fruits</a></li>
+                </ul>
+              </div>
+            <div class="">
+                <img src="images/logo.png" alt="">
+                <a class="btn btn-ghost normal-case text-4xl font-bold">Fruit Burst</a>
+            </div>
+            <div class="hidden lg:flex">
+                <div class=" flex justify-center items-center input input-bordered rounded-[500px] bg-white">
+                    <input type="text" placeholder="Search here" class="bg-white" />
+                    <i class="fa-solid fa-magnifying-glass text-black"></i>
+                </div>
+            </div>
+            <div class="">
+                <div class="dropdown">
+                  <label tabindex="0" class="btn btn-ghost lg:hidden">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+                  </label>
+                  <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                    <li><a>Home</a></li>
+                    <li><a>About</a></li>
+                    <li><a>Shop</a></li>
+                    <li><a>All Fruits</a></li>
+                  </ul>
+                </div>
+              </div>
+        </div>
+        <!-- Navbar ends here -->
+
+        <!-- banner section start here -->
+        <section class="my-12">
+            <div class="hero min-h-screen" style="background-image: url(images/banner1.png);">
+                <div class="hero-overlay bg-opacity-60"></div>
+                <div class="hero-content text-center text-neutral-content">
+                  <div>
+                    <h1 class="mb-5 text-7xl font-black">Exotic tastes at your <br> doorstep</h1>
+                    <p class="mb-5 text-2xl font-normal">We supply highly quality organic products.</p>
+                    <button class="btn bg-primary-bg border-none text-white font-extrabold">Shop Now</button>
+                  </div>
+                </div>
+              </div>
+        </section>
+    </header>
+    <main>
+
+    </main>
+    <footer>
+
+    </footer>
 </body>
 </html>
